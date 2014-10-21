@@ -44,7 +44,7 @@ askreddits = ['askreddit', 'askscience']#store the root comments, and original q
 ama = ['iama']#store only the root comments with op responses, and submission title/text
 pic = ['pics']#link to the picture, highlight any op comments, top couple comments
 
-app = Bottle()
+app = Bottle() 
 r = praw.Reddit(user_agent='the redditor v1')
 results = posts(askreddits[0])
 
