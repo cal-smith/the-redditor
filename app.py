@@ -12,8 +12,8 @@ def posts(sub):
 		print "post"
 		for y in x.comments[0:5]:
 			print "comment"
-			comments.append({"body":y.body,"score":y.score})
-		c.append({"title": x.title,"score": x.score,"comments":comments})
+			comments.append({"body":y.body, "score":y.score, "id":y.id})
+		c.append({"title": x.title, "score": x.score, "comments":comments, "id":x.id})
 	print "done"
 	return c
 
