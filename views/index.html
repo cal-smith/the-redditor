@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Symposia</title>
+	<!--<script src="http://fb.me/react-0.11.2.js"></script>
+	<script src="http://fb.me/react-0.11.2.min.js"></script>
+	<script src="http://fb.me/JSXTransformer-0.11.2.js"></script>-->
+	<script src="/static/element1.min.js"></script>
+	<style type="text/css" link="/static/main.css"></style>
+</head>
+<body>
+	<script type="text/javascript">
+		var w;
+		ajax.send({url:"/json", json: true}, function (data) {
+			w = data;
+			var elm = document.getElementById('issue');
+			for (var i = 0; i < data.length; i++) {
+				elm.innerHTML += "<h4>" + data[i].title + "</h4>";
+				for (var x = 0; x < data[i].comments.length; x++) {
+					elm.innerHTML += "<p>" + data[i].comments[x].body + "</p>";
+				}
+			}
+		});
+	</script>
+	<div id="issue"></div>
+</body>
+</html>
